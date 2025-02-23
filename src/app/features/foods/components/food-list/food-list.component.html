@@ -1,0 +1,14 @@
+@let loading = loading$ | async;
+@let foods = foodList$ | async;
+<div class="food-container">
+@if(loading){
+  <mat-spinner></mat-spinner>
+}
+@else {
+    @for (food of foods; track food.id) {
+      <app-card-food [item]="food"></app-card-food>
+    }
+}
+</div>
+
+

@@ -1,0 +1,18 @@
+@use '@angular/material' as mat;
+
+.filter-overlay {
+  padding: 8px 0;
+  min-width: 150px;
+  &:last-child{
+    text-align: center;
+  }
+
+  .clear-button{
+    width: 90%;
+    border-radius: 0;
+    @include mat.button-overrides((
+      filled-container-color: #DFDEE2,
+      filled-label-text-color: black,
+    ));
+  }
+}

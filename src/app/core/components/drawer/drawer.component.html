@@ -1,0 +1,12 @@
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="over">
+    <mat-list role="list">
+      @for (item of menu; track item.title) {
+        <mat-list-item (click)="drawer.toggle()" class="list-item" role="link" [routerLink]="item.link">
+          {{item.title}}
+        </mat-list-item>
+      }
+    </mat-list>
+  </mat-drawer>
+  <ng-content />
+</mat-drawer-container>

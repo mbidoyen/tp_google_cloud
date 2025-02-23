@@ -1,0 +1,19 @@
+@let food = item();
+
+<mat-card class="container">
+  <mat-card-header routerLink="/food/{{food.id}}">
+    <mat-card-title>{{ food.name }}</mat-card-title>
+  </mat-card-header>
+  <img routerLink="/food/{{food.id}}" mat-card-image src="{{food.image}}" alt="Photo of a {{food.name}}">
+  <mat-card-content>
+    <p class="food-description-content" routerLink="/food/{{food.id}}">
+      {{ food.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="actions">
+    <button mat-flat-button class="cart-button">
+      Add to cart
+      <mat-icon fontIcon="add_shopping_cart" />
+    </button>
+  </mat-card-actions>
+</mat-card>
